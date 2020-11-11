@@ -44,4 +44,4 @@ app.get('/todo',(req,res)=>{
     });
 });
 
-app.listen(3000,console.log(`server is running on ${PORT}`.red.underline.bold))
+app.listen(3000,'0.0.0.0',console.log(`server is running on ${PORT}`.red.underline.bold))
