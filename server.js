@@ -32,6 +32,7 @@ dotenv.config({
 connectDB();
 
 //https://localhost:3000/todo/api/auth/resister/
+// https://todoappst.herokuapp.com/
 
 app.use('/api/todo/auth',require('./routes/user'))
 
