@@ -102,7 +102,7 @@ router.post('/login', async (req,res,next)=>{
     try{
         let user = await userModel.findOne({email:email});
         if(!user){
-            res.status(400).json({
+            return res.status(400).json({
                 success:false,
                 msg:'User not exists go and first register then continue'
             });
@@ -110,7 +110,7 @@ router.post('/login', async (req,res,next)=>{
 
         const isMatch = await bcryptjs.compare(password,user.password);
         if(!isMatch){
-            res.status(400).json({
+           return res.status(400).json({
                 success:false,
                 msg:'Password is incorrect'
             });
