@@ -35,6 +35,7 @@ connectDB();
 // https://todoappst.herokuapp.com/
 
 app.use('/api/todo/auth',require('./routes/user'))
+app.use('/api/todo',require('./routes/todo'));
 
 const PORT = process.env.PORT || 3000;
 
@@ -45,4 +46,4 @@ app.get('/todo',(req,res)=>{
     });
 });
 
-app.listen(PORT,'0.0.0.0',console.log(`server is running on ${PORT}`.red.underline.bold))
+app.listen(3000,'0.0.0.0',console.log(`server is running on ${PORT}`.red.underline.bold))
