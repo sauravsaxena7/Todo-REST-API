@@ -131,7 +131,7 @@ router.post('/login', async (req,res,next)=>{
                 if(error) throw error;
                 res.status(200).json({
                     success:true,
-                    msg:"user logged in successfully",
+                    msg:"user logged in successfully now enjoy",
                     token:token,
                     user:user
                 });
