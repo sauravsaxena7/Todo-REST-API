@@ -128,7 +128,7 @@ router.post('/login', async (req,res,next)=>{
                 expiresIn:360000
                 
             }, (error,token)=>{
-                if(error) throw console.error();
+                if(error) throw error;
                 res.status(200).json({
                     success:true,
                     msg:"user logged in successfully",
@@ -151,6 +151,15 @@ router.post('/login', async (req,res,next)=>{
 });
 
 
+
 //Authorisation / Authentication
 
 module.exports=router;
+
+//push on git
+
+//git remote add origin https://github.com/sauravsuman7/Todo-REST-API.git
+
+// git commit -m "first commit"
+//git branch -M main  
+// git push -u origin main
